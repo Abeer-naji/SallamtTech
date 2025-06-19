@@ -333,11 +333,27 @@ footer {
 }
 
 
- 
+
 .footer-logo {
   width: 100px;
   margin-bottom: 10px;
+  
+  
 }
+.footer-right{
+  padding-left: 1200px;
+  margin-top: -50px;
+}
+.footer-center{
+  margin-top: -100px;
+}
+.footer-left{
+  padding-right: 1200px;
+  padding-bottom: 20px;
+  margin-top: -50px;
+}
+
+
 
 footer a {
   color: #577F96;
