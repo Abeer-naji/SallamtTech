@@ -72,7 +72,7 @@ margin: 0;
 
 /* Hero Section */
 .hero {
-  background-image: url('/media/image1.png');
+  background-image: url('/SallamtTech/media/image1.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -110,7 +110,7 @@ margin: 0;
   text-align: left; /* Align all content inside this container to the left */
 }
 .cta-button:hover {
-  background-color: #ff7000;
+  background-color: #4f636d;
 }
 /*sponsers sectin*/
 .sponsors {
@@ -172,15 +172,15 @@ margin: 0;
 }
 
 .slider-item:nth-child(1) {
-  background-image: url('/media/slider1.png');
+  background-image: url('/SallamtTech/media/slider1.png');
 }
 
 .slider-item:nth-child(2) {
-  background-image: url('/media/slider2.png');
+  background-image: url('/SallamtTech/media/slider2.png');
 }
 
 .slider-item:nth-child(3) {
-  background-image: url('/media/slider3.png');
+  background-image: url('/SallamtTech/media/slider3.png');
 }
 
 .overlay-text {
@@ -253,7 +253,7 @@ margin: 0;
   display: flex;
   justify-content: space-between; /* Ensure space between items */
   padding: 40px; /* Added padding to all sides of the section to create space from the browser's edge */
-  background-image: url('/media/imag2.jpg'); /* Add the image here as background */
+  background-image: url('/SallamtTech/media/imag2.jpg'); /* Add the image here as background */
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the image */
   border-radius: 90px; /* Softer edges for the section */
@@ -264,7 +264,7 @@ padding-right: 70px;
 }
 
 .feature {
-  text-align: left; /* Align the text to the left */
+  text-align: center; /* Align the text to the left */
   max-width: 350px;
   height: 650px;
   background-color: transparent; /* Removed the background color from the feature container */
@@ -280,16 +280,21 @@ padding-right: 70px;
 
 /* Flexbox layout for the content inside each feature */
 .feature h3 {
-  font-size: 24px;
+  font-size: 90px;
   margin-bottom: 10px;
   text-align: right; /* Align the heading to the right */
+  margin-left: -100px;
+  color:white;
+  margin-right: -900px;
+  margin-top: 300px;
 }
 
 .feature p {
-  font-size: 16px;
-  color: #000000;
-  text-align: left; /* Align the paragraph to the left */
+  font-size: 30px;
+  color: white;
+  text-align: right; /* Align the paragraph to the left */
   flex-grow: 1; /* Ensure the paragraph takes the remaining space */
+  margin-top: -400px;
 }
 
 .feature img {
@@ -310,6 +315,8 @@ padding-right: 70px;
   text-decoration: none; /* Remove underline from the link */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  margin-right: -900px;
+  margin-top: 300px;
   
 }
 
@@ -323,7 +330,7 @@ padding-right: 70px;
 .contact {
   text-align: right; /* Align the text to the right */
   padding: 50px 20px;
-  background-color: #CCCFD2; /* Set background color */
+  background-color: #D1D9D2; /* Set background color */
   color: black; /* Text color */
   border-radius: 150px; /* Softer edges for the rectangular box */
   border: 2px solid #CCCFD2; /* Soft border around the section */
@@ -344,7 +351,7 @@ padding-right: 70px;
 .contact p {
   font-size: 28px; /* Adjust font size for the paragraph */
   color: black; /* Make the paragraph text black */
-  margin-bottom: 40px; /* Space after paragraph */
+  margin-bottom: 10px; /* Space after paragraph */
   margin-right: 50px;
 }
 
@@ -381,74 +388,93 @@ padding-right: 70px;
 
 /* Footer */
 footer {
-    margin-top: 70px;
-    background-color: #d1d7df;
-    padding: 20px;
+    background-color: #D1D9D2;
+    padding: 40px 20px 20px;
     color: #4f636d;
+    font-family: sans-serif;
+    direction: rtl;
+    margin-top: 70px; /* Add space between this section and the one above it */
 }
 
-.footer-content {
+.footer-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .footer-left,
 .footer-center,
 .footer-right {
     flex: 1;
-    text-align: center;
+    min-width: 200px;
 }
 
-.footer-left .address {
-    font-size: 14px;
-    line-height: 1.5;
+.footer-left{
+  text-align: left;
+  margin-top: -70px;
+}
+.center text{
+  text-align: center;
+}
+.footer-center{
+  text-align: center;
 }
 
-.footer-center .contact-title {
-    font-size: 16px;
+.section-title {
     font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
-.footer-center .phone,
-.footer-center .email {
+.address,
+.phone,
+.email {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-.footer-center .email a {
+.email a {
     color: #4f636d;
     text-decoration: none;
 }
 
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+
+
+.footer-logo {
+    width: 180px;
+    height: 170px;
+    margin-top: 0px;
+   
 }
 
-.footer-right .footer-logo {
-    width: 100px;  /* Adjust the logo size as needed */
-    margin-bottom: 10px; /* Space between logo and text */
+.footer-right img{
+  float: right;
+  margin-left: 20px;
+  margin-top: -70px;
 }
 
-.footer-right .privacy-policy,
-.footer-right .terms {
+.footer-divider {
+    margin: 30px 0 20px;
+    border: none;
+    border-top: 1px solid #4f636d;
+}
+
+.footer-bottom {
+    text-align: center;
     font-size: 14px;
-    margin: 5px 0;
 }
 
-.footer-right .privacy-policy a,
-.footer-right .terms a {
+.footer-bottom-links {
+    margin-bottom: 10px;
+}
+
+.footer-bottom a {
     color: #4f636d;
     text-decoration: none;
+    margin: 0 5px;
 }
 
-.footer-right .copyright {
-    font-size: 14px;
-}
-
-footer a:hover {
+.footer-bottom a:hover {
     text-decoration: underline;
 }
