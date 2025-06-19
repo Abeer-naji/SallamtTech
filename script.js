@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 document.querySelector('.arrow-left').addEventListener('click', () => {
-  document.querySelector('.slider-container').scrollBy({ left: -1400, behavior: 'smooth' });
+  document.querySelector('.slider-container').scrollBy({ left: -1100, behavior: 'smooth' });
 });
 
 document.querySelector('.arrow-right').addEventListener('click', () => {
-  document.querySelector('.slider-container').scrollBy({ left: 1400, behavior: 'smooth' });
+  document.querySelector('.slider-container').scrollBy({ left: 1100, behavior: 'smooth' });
 });
 

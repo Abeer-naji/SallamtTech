@@ -1,14 +1,16 @@
-/* General Styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Tajawal', sans-serif;
 }
 
 body {
   background-color: #f4f4f4;
+  color: #000;
 }
+
 
 a {
   text-decoration: none;
@@ -19,13 +21,11 @@ ul {
   list-style: none;
 }
 
-/* Header */
-header {
-background-color: white;
 
-color: white;
-padding: 0;
-margin: 0;
+header {
+  background-color: white;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar {
@@ -33,17 +33,13 @@ margin: 0;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
- margin: 0 auto; /* Center the navbar */
-  padding: 0; /* Remove padding */
-  background-color: white;
-  margin-top: -50px;
-  margin-bottom: -50px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
 .navbar .logo img {
-   width: 200px;
-  height: 200px;
-  
+  width: 160px;
+  height: auto;
 }
 
 .nav-links {
@@ -51,180 +47,174 @@ margin: 0;
   gap: 20px;
 }
 
-.nav-links li {
-  display: inline-block;
-}
+
 
 .nav-links a {
   color: #152935;
-  font-weight: bold;
-  padding: 10px;
-  transition: color 0.3s;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-  
-  background-color: #D1D9D2; /* Background color on hover */
-  color: #000000AD; /* Text color change */
-  border-radius: 15px; /* Keep soft rounded corners on hover */
+  background-color: #D1D9D2;
+  color: #000;
+  border-radius: 12px;
 }
 
 
-/* Hero Section */
+
 .hero {
-  background-image: url('/SallamtTech/media/image1.png');
+  background-image: url('/media/image1.png');
   background-size: cover;
   background-position: center;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  height: 70vh;
+  color: #000;
+  text-align: left;
+  padding: 100px 20px 40px;
 }
 
 .hero-content h1 {
-  font-size: 80px;
-  line-height: 1; /* Adjust line spacing */
-  margin-bottom: 20px;
-  margin-top:-30px;
-  text-align: left; /* Center-align the text */
-  color: #000000;
-  font-family:'Tajawal', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .hero-content p {
   font-size: 20px;
-  margin-bottom: 30px;
-  text-align: left;
-  font-family: 'Tajawal', sans-serif;
+  margin-bottom: 5px;
+   color: #fff;
+}
+
+.button-container {
+  margin-top: 20px;
 }
 
 .cta-button {
-  background-color: #FFFFFF;
-  color: black;
-  padding: 15px 50px;
+  background-color: #fff;
+  color: #000;
+  padding: 12px 30px;
   border-radius: 30px;
-  font-size: 16px;
-  margin-left: 0;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.button-container {
-  text-align: left; /* Align all content inside this container to the left */
-}
+
 .cta-button:hover {
   background-color: #4f636d;
+  color: #fff;
 }
-/*sponsers sectin*/
+
+
 .sponsors {
-  text-align: center; /* Centers the text in the section */
-  margin: 40px 0; /* Add margin for spacing (optional) */
-  background-color: f4f4f4;
+  text-align: center;
+  margin: 50px 0;
 }
 
 .sponsors p {
-  font-size: 24px; /* Adjust the text size */
-  margin-bottom: 20px; /* Space between text and images */
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .logos {
-  display: flex; /* Enables flexbox for the images */
-  justify-content: center; /* Centers the images horizontally */
-  gap: 20px; /* Adds space between the images */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .logos img {
-  max-width: 80px; /* Limit the width of the images */
-  height: auto; /* Ensure the images maintain their aspect ratio */
+  width: 80px;
+  height: auto;
 }
 
 
-/* Style for the slider */
-.slider h1 {
-    text-align: center;
-    color: #577F96;
-    font-size: 80px;
-}
+
 
 .slider {
-  margin: 50px 0;
-  background-color: #f4f4f4; /* Fixed typo in background color */
-  padding: 20px 0;
-  position: relative; /* For positioning the arrows */
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  position: relative;
+}
+
+.slider h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #577F96;
+  margin-bottom: 30px;
 }
 
 .slider-container {
   display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-x: auto;
   gap: 20px;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .slider-item {
-  flex-shrink: 0; /* Prevent shrinking */
-  width: 1400px; /* Adjust the width as per your needs */
-  height: 700px; /* Adjust the height as per your needs */
-  background-color: #ffffff;
-  padding: 0; /* Removed padding to make the image fill the entire item */
-  border-radius: 25px; /* Softened the edges by increasing border-radius */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Softer shadow for a more subtle effect */
-  text-align: center;
-  position: relative; /* To position text over the image */
-  background-size: cover; /* Ensures the image covers the area */
-  background-position: center; /* Centers the background image */
+  min-width: 90%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .slider-item:nth-child(1) {
-  background-image: url('/SallamtTech/media/slider1.png');
+  background-image: url('/media/slider1.png');
 }
 
 .slider-item:nth-child(2) {
-  background-image: url('/SallamtTech/media/slider2.png');
+  background-image: url('/media/slider2.png');
 }
 
 .slider-item:nth-child(3) {
-  background-image: url('/SallamtTech/media/slider3.png');
+  background-image: url('/media/slider3.png');
 }
 
 .overlay-text {
-  position: absolute; /* Absolutely position the text over the background */
-  top: 50%; /* Center the text vertically */
-  left: 50%; /* Center the text horizontally */
-  transform: translate(-50%, -50%); /* Properly center the text */
-  color: #ffffff; /* White text */
-  text-align: center;
-  padding: 20px;
-  background: rgba(229, 235, 236, 0.929); /* Semi-transparent background for text visibility */
-  border-radius: 8px;
-  width: 100%; /* Optional: Make the text container smaller than the image */
-  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .overlay-text h2 {
-  font-size: 70px;
+  font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
-  text-align: center;
-  margin-top: 120px;
-  color: #000000;
+   text-align: center;
+
 }
+
 
 .overlay-text p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #000000;
+  font-size: 18px;
+  line-height: 1.6;
+   text-align: center;
 }
 
-/* Arrow Styles */
-.arrow-left, .arrow-right {
+
+
+.arrow-left,
+.arrow-right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: #152935;
+  color: #fff;
   border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
+  padding: 12px;
+  font-size: 20px;
   border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .arrow-left {
@@ -235,246 +225,126 @@ margin: 0;
   right: 10px;
 }
 
-.arrow-left:hover, .arrow-right:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
-
-
-
-
-
-
-
-
-
-/* Features Section */
 .features {
-  display: flex;
-  justify-content: space-between; /* Ensure space between items */
-  padding: 40px; /* Added padding to all sides of the section to create space from the browser's edge */
-  background-image: url('/SallamtTech/media/imag2.jpg'); /* Add the image here as background */
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the image */
-  border-radius: 90px; /* Softer edges for the section */
-  position: relative;
-  overflow: hidden; /* Ensures content doesn't overflow the rounded corners */
-  margin: 0 20px; /* This will add some space between the background image and the edges of the browser */
-padding-right: 70px;
+  background-image: url('/media/imag2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  border-radius: 60px;
+  margin: 50px 20px;
 }
 
 .feature {
-  text-align: center; /* Align the text to the left */
-  max-width: 350px;
-  height: 650px;
-  background-color: transparent; /* Removed the background color from the feature container */
-  padding: 20px;
-  border-radius: 25px; /* Softer edges for each feature container */
-  margin: 20px;
-  position: relative;
-  flex: 1; /* Allow the feature box to grow */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 30px;
+  text-align: right;
 }
 
-/* Flexbox layout for the content inside each feature */
+
 .feature h3 {
-  font-size: 90px;
-  margin-bottom: 10px;
-  text-align: right; /* Align the heading to the right */
-  margin-left: -100px;
-  color:white;
-  margin-right: -900px;
-  margin-top: 300px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .feature p {
-  font-size: 30px;
-  color: white;
-  text-align: right; /* Align the paragraph to the left */
-  flex-grow: 1; /* Ensure the paragraph takes the remaining space */
-  margin-top: -400px;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-.feature img {
-  max-width: 100px;
-  margin-bottom: 20px;
-}
 
-/* Button Styles */
 .learn-more-button {
-  position: absolute;
-  bottom: 20px; /* Position the button towards the bottom of the feature */
-  right: 20px; /* Align the button to the right */
-  padding: 12px 25px;
-  background-color: rgba(255, 255, 255, 0.8); /* Soft transparent white background */
-  color: #333; /* Dark text color */
-  font-size: 16px;
-  border-radius: 50px; /* Softer rounded shape */
-  text-decoration: none; /* Remove underline from the link */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
-  margin-right: -900px;
-  margin-top: 300px;
-  
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #fff;
+  border-radius: 30px;
+  color: #4f636d;
+  font-weight: bold;
+  border: 2px solid #4f636d;
+  transition: 0.3s;
 }
 
 .learn-more-button:hover {
-  background-color: rgba(255, 255, 255, 1); /* Slightly less transparent when hovered */
-  color: #577F96; /* Change text color on hover */
+  background-color: #4f636d;
+  color: #fff;
 }
 
 
-/* Contact Section */
+
 .contact {
-  text-align: right; /* Align the text to the right */
-  padding: 50px 20px;
-  background-color: #D1D9D2; /* Set background color */
-  color: black; /* Text color */
-  border-radius: 150px; /* Softer edges for the rectangular box */
-  border: 2px solid #CCCFD2; /* Soft border around the section */
-  position: relative;
-  margin-top: 70px; /* Add space between this section and the one above it */
-  height: 500px;
+  background-color: #D1D9D2;
+  padding: 60px 20px;
+  border-radius: 100px;
+  text-align: right;
+  margin: 50px 20px;
 }
 
-/* Heading */
+
 .contact h1 {
-  font-size: 70px; /* Adjust size of the heading */
-  color: black; /* Ensure the heading is black */
-  margin-bottom: 20px; /* Space between h1 and p */
-  margin-right: 50px;
+  font-size: 48px;
+  margin-bottom: 15px;
+  
 }
 
-/* Paragraph */
+
 .contact p {
-  font-size: 28px; /* Adjust font size for the paragraph */
-  color: black; /* Make the paragraph text black */
-  margin-bottom: 10px; /* Space after paragraph */
-  margin-right: 50px;
-}
-
-/* CTA Wrapper */
-.cta-wrapper {
-  display: flex; /* Use flexbox to align items horizontally */
-  align-items: center; /* Vertically align the text and arrow */
-  position: absolute;
-  top: 50%; /* Position vertically in the middle */
-  left: 20px; /* Position on the left side */
-  transform: translateY(-50%); /* Center the items vertically */
-}
-
-/* Arrow Button */
-.cta-arrow {
-  background-color: transparent; /* Transparent background */
-  color: black; /* Text color */
-  padding: 12px 20px;
-  font-size: 30px; /* Larger arrow */
-  text-decoration: none;
+  font-size: 22px;
+  margin-bottom: 20px;
   font-weight: bold;
-  border-radius: 50%; /* Rounded arrow */
-  border: 2px solid #CCCFD2; /* Soft border around the arrow */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
-  margin-right: 10px; /* Space between the arrow and the text */
+  
+}
+
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.cta-arrow {
+  font-size: 32px;
+  background-color: transparent;
+  border: 2px solid #4f636d;
+  padding: 10px;
+  border-radius: 50%;
+  color: #4f636d;
+  transition: 0.3s;
 }
 
 .cta-arrow:hover {
-  background-color: #CCCFD2; /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
+  background-color: #4f636d;
+  color: #fff;
 }
 
-
-
-/* Footer */
+/* 🧾 الفوتر */
 footer {
-    background-color: #D1D9D2;
-    padding: 40px 20px 20px;
-    color: #4f636d;
-    font-family: sans-serif;
-    direction: rtl;
-    margin-top: 70px; /* Add space between this section and the one above it */
-}
-
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.footer-left,
-.footer-center,
-.footer-right {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-left{
-  text-align: left;
-  margin-top: -70px;
-}
-.center text{
+  background-color: #D1D9D2;
+  padding: 40px 20px;
   text-align: center;
-}
-.footer-center{
-  text-align: center;
-}
-
-.section-title {
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-
-.address,
-.phone,
-.email {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.email a {
-    color: #4f636d;
-    text-decoration: none;
+  font-size: 14px;
+  color: #577F96;
+  font-weight: bold;
+  
 }
 
 
-
+ 
 .footer-logo {
-    width: 180px;
-    height: 170px;
-    margin-top: 0px;
-   
+  width: 100px;
+  margin-bottom: 10px;
 }
 
-.footer-right img{
-  float: right;
-  margin-left: 20px;
-  margin-top: -70px;
+footer a {
+  color: #577F96;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.footer-divider {
-    margin: 30px 0 20px;
-    border: none;
-    border-top: 1px solid #4f636d;
-}
-
-.footer-bottom {
-    text-align: center;
-    font-size: 14px;
-}
-
-.footer-bottom-links {
-    margin-bottom: 10px;
-}
-
-.footer-bottom a {
-    color: #4f636d;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
+footer a:hover {
+  text-decoration: underline;
 }
