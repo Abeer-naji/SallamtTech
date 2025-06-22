@@ -35,6 +35,9 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 20px;
+  padding-top: -400px;
+  padding-bottom: -300px;
+   height: 60px; /* Set a specific height to make it compact */
 }
 
 .navbar .logo img {
@@ -362,5 +365,88 @@ footer a {
 }
 
 footer a:hover {
+  text-decoration: underline;
+}
+/* Add background image to the login section or any specific section */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: url('/media/signInbackGround.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 20px;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 20px;/*to make the edges softer*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#000;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  font-size: 16px;
+  text-align: right;
+}
+
+
+button {
+  width: 100px;
+  padding: 10px;
+  background-color: #577F96;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button_container{
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center; /* Optionally center the button vertically */
+  height: 100%; /* If you want to center it vertically, make sure the container has a height */
+}
+
+button:hover {
+  background-color: #577F96;
+}
+
+.no-account{
+  text-align: center;
+  color: #000;
+}
+
+a {
+  color: #577F96;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
 }
