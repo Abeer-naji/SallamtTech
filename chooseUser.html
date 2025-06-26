@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
- 
 </head>
 <body>
   <header>
@@ -31,18 +30,26 @@
 <!-- Login Form Section -->
   <section class="login-section">
     <div class="login-container">
-      <form id="signInForm" action="#" method="POST">
-        <h2>تسجيل الدخول</h2>
-        
-        <input type="text" id="username" name="username" placeholder="أدخل اسمك" required>
+      <form action="#" method="POST">
+        <h2>إنشاء حساب جديد</h2>
+        <p class="chooseUserText">اختر نوع المستخدم</p>
 
-        
-        <input type="text" id="phone" name="phone" placeholder="أدخل رقم الجوال" required>
+        <div class="chooseUser_button_container">
+<a href="farmer_signUp.html">
+  <button type="button">مزارع</button>
+</a>
+<a href="investor-signup.html">
+  <button type="button">ممول</button>
+</a>
+<a href="supplier_signUp.html">
+  <button type="button">مورد</button>
+</a>
+<a href="buyer_signUp.html">
+  <button type="button">مشتري</button>
+</a>
 
-        <div class="button_container">
-  <button type="submit">تسجيل</button>
 </div>
-        <p class="no-accountText">ليس لديك حساب؟ <a href="signup.html">انشئ حساب</a></p>
+        <p class="has-accountText">هل لديك حساب بالفعل؟ <a href="signIn.html">تسجيل دخول </a></p>
       </form>
     </div>
   </section>

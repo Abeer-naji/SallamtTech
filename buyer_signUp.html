@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salamatc sign up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+<ul class="nav-links">
+        <li><a href="#">تواصل معنا</a></li>
+        <li><a href="#">الاسئلة الشائعة</a></li>
+        <li><a href="#">المشتري</a></li>
+        <li><a href="#">الممول</a></li>
+        <li><a href="#">المورد</a></li>
+        <li><a href="#">المزارع</a></li>
+        <li><a href="#"> تسجيل الدخول</a></li>
+        <li><a href="#"> الرئيسية</a></li>
+</ul>
+      <div class="logo">
+        <img src="/media/sllamTech_logo.png" alt="sallamTech Logo">
+      </div>
+    </nav>
+  </header>
+<body>
+  <div class="SignupForm_section">
+  <div class="signup_container">
+  <div class="progress-bar">
+  <div class="step-indicator active">المعلومات الشخصية</div>
+  <div class="step-indicator">المنتجات المطلوبة</div>
+  <div class="step-indicator">تفاصيل الطلب</div>
+</div>
+
+  <div class="form-container">
+    <form id="buyerSignUpForm">
+      <!-- Step 1 -->
+      <div class="step active">
+        <input id="buyerFullName"type="text" placeholder="الاسم الكامل/ اسم الجهة" required />
+        <input id="buyerPhone" type="tel" placeholder="رقم الجوال" required />
+        <input id="buyerEmail" type="email" placeholder="البريد الإلكتروني (اختياري)" />
+        <input id="buyerPassword" type="password" placeholder="كلمة المرور" required />
+      </div>
+
+    <!-- Step 2 -->
+    <div class="step">
+        <!-- وضع الأرض -->
+<label>نوع المحصول المطلوب</label><br>
+<div class="radio-grid">
+<label>
+  <input type="radio" name="land_status" value="طماطم" required>
+  طماطم
+</label>
+<label>
+  <input type="radio" name="land_status" value="تمر">
+  تمر
+</label>
+<label>
+  <input type="radio" name="land_status" value="قمح">
+  قمح
+</label>
+</div>
+ <label for="area">الكمية المطلوبة:</label>
+  <input type="text" id="area" name="area" required /><br>
+
+
+<br><br>
+
+</select>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+         <label>توقيت الشراء المتوقع:</label><br>
+<div class="radio-grid">
+  <label><input type="radio" name="farming_type" value="شهري"> شهري</label>
+  <label><input type="radio" name="farming_type" value="موسمي"> موسمي</label>
+  <label><input type="radio" name="farming_type" value="مرة واحدة">مرة واحدة</label>
+</div>
+
+<label>هل ترغب بعينة قبل الشراء؟</label><br>
+<div class="radio-grid">
+  <label><input type="radio" name="crop" value="نعم"> نعم</label>
+  <label><input type="radio" name="crop" value="لا"> لا</label>
+</div>
+ <label for="notes">هل لديك مواصفات خاصة بالمحصول:</label>
+  <input type="text" id="notes" name="area" required /><br>
+ </div>
+
+
+
+      <!-- Buttons -->
+<div class="step-buttons">
+  <button type="button" class="prev-button" onclick="prevStep()">السابق</button>
+  <button type="button" class="next-button" onclick="nextStep()">التالي</button>
+</div>
+ </div>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+
+  
+</body>
+<footer>
+  <div class="footer-right">
+      <img class="footer-logo" src="/media/sllamTech_logo.png" alt="Salam Tech Logo">
+    </div>
+  <div class="footer-center">
+      <p class="section-title">تواصل معنا</p>
+      <p class="phone">+966 12 345 6789</p>
+      <p class="email"><a href="mailto:info@sallmtech.com">info@sallmtech.com</a></p>
+    </div>
+  <div class="footer-top">
+    <div class="footer-left">
+      <span class="center text">
+      <p class="section-title">العنوان</p>
+      <p class="address">الرياض، المملكة العربية السعودية</p>
+      </span>
+    </div>
+  
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-links">
+      <ul>
+      <li><a href="#">سياسة الخصوصية</a> </li>
+      <a href="#">الشروط والأحكام</a>
+      </ul>
+    </div>
+    <p class="copyright">© 2025 سلم .تك. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+<script>
+
+let currentStep = 0;
+const steps = document.querySelectorAll('.step');
+const indicators = document.querySelectorAll('.step-indicator');
+const nextButton = document.querySelector('.next-button');  // Target the "التالي" button
+const prevButton = document.querySelector('.prev-button');  // Target the "السابق" button
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('active', i === index);
+  });
+
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle('active', i === index);
+  });
+
+  // Change button text to "تسليم" on the last step
+  if (currentStep === steps.length - 1) {
+    nextButton.textContent = "تسليم";  // Change to "تسليم" on last step
+  } else {
+    nextButton.textContent = "التالي"; // Keep "التالي" for other steps
+  }
+}
+
+function nextStep() {
+  // Go to the next step
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  } else {
+    // If we're at the last step, submit the form
+    document.getElementById("buyerSignUpForm").submit();  // Submit form on last step
+    alert('تم تقديم النموذج بنجاح');
+  }
+}
+
+function prevStep() {
+  // Go to the previous step
+  if (currentStep > 0) {
+    currentStep--;
+    showStep(currentStep);
+  }
+}
+
+// Initial display
+showStep(currentStep);
+
+
+</script>

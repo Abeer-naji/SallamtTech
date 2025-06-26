@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "username": "investor1",
+      "password": "investorPass123",
+      "email": "investor1@example.com",
+      "role": "investor",
+      "fullName": "Ali Al-Hassan",
+      "phone": "+966123456789",
+      "company": "Al-Hassan Investments",
+      "interestRate": "5%",
+      "investmentType": "Agriculture",
+      "investmentAmount": "1000000 SAR",
+      "contractDuration": "3 years",
+      "paymentTerms": "Quarterly"
+    },
+    {
+      "username": "farmer1",
+      "password": "farmerPass123",
+      "email": "farmer1@example.com",
+      "role": "farmer",
+      "fullName": "Ahmed Al-Farsi",
+      "phone": "+966987654321",
+      "address": "Riyadh, Saudi Arabia",
+      "landStatus": "مزرعة تمليك",
+      "city": "الرياض",
+      "farmingType": "مكشوف",
+      "mainCrops": ["قمح", "شعير"],
+      "plantingSeason": "فصل الشتاء",
+      "fieldSize": "1000 متر مربع",
+      "productionVolume": "5000 كجم",
+      "contractedBefore": "نعم",
+      "contractParty": "شركة XYZ",
+      "annualSalesVolume": "500000 SAR",
+      "challenges": ["قلة المياه", "الآفات الزراعية"]
+    },
+    {
+      "username": "buyer1",
+      "password": "buyerPass123",
+      "email": "buyer1@example.com",
+      "role": "buyer",
+      "fullName": "Sarah Al-Saud",
+      "phone": "+966555555555",
+      "company": "Al-Saud Trading",
+      "requestedProduct": "طماطم",
+      "quantityRequested": "1000 كيلو",
+      "purchaseTiming": "موسمي",
+      "sampleRequest": "نعم",
+      "productSpecifications": "نقاء 95% أو أعلى"
+    },
+    {
+      "username": "supplier1",
+      "password": "supplierPass123",
+      "email": "supplier1@example.com",
+      "role": "supplier",
+      "fullName": "Hassan Al-Zahrani",
+      "phone": "+966555123456",
+      "companyName": "Zahrani Supplies",
+      "productType": "بذور",
+      "availableProducts": ["طماطم", "خيار"],
+      "minOrder": "1000 كيلو",
+      "deliveryMethod": "توصيل مباشر",
+      "deliveryTime": "3 أيام"
+    }
+  ]
+}

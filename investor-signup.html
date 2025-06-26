@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salamatc sign up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+<ul class="nav-links">
+        <li><a href="#">تواصل معنا</a></li>
+        <li><a href="#">الاسئلة الشائعة</a></li>
+        <li><a href="#">المشتري</a></li>
+        <li><a href="#">الممول</a></li>
+        <li><a href="#">المورد</a></li>
+        <li><a href="#">المزارع</a></li>
+        <li><a href="#"> تسجيل الدخول</a></li>
+        <li><a href="#"> الرئيسية</a></li>
+</ul>
+      <div class="logo">
+        <img src="/media/sllamTech_logo.png" alt="sallamTech Logo">
+      </div>
+    </nav>
+  </header>
+<body>
+  <div class="SignupForm_section">
+  <div class="signup_container">
+  <div class="progress-bar">
+  <div class="step-indicator active">المعلومات الشخصية</div>
+  <div class="step-indicator"> معلومات التمويل</div>
+  <div class="step-indicator"> شروط التمويل</div>
+</div>
+
+  <div class="form-container">
+    <form id="investorSignUpForm">
+      <!-- Step 1 -->
+      <div class="step active">
+        <input id="investorFullName" type="text" placeholder="الاسم الكامل/ اسم الجهة" required />
+        <label> نوع الجهة</label><br>
+        <div class="radio-group">
+<label>
+  <input type="radio" name="land_status" value="فرد" required>
+  فرد
+</label>
+<label>
+  <input type="radio" name="land_status" value="بنك">
+  بنك
+</label>
+<label> 
+  <input type="radio" name="land_status" value="صندوق">
+  صندوق
+</label>
+</div>
+
+        <input id="investorPhone" type="tel" placeholder="رقم الجوال" required />
+        <input id="investorEmail" type="email" placeholder="البريد الإلكتروني (اختياري)" />
+        <input id="investorPassword" type="password" placeholder="كلمة المرور" required />
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step">
+        <!-- وضع الأرض -->
+<label for="funding-source">نوع جهة التمويل</label><br>
+<input type="text" id="funding-source" name="funding-source" required placeholder="أدخل نوع جهة التمويل"><br>
+
+<label for="max-funding">الحد الاعلى للتمويل</label><br>
+<input type="text" id="max-funding" name="max-funding" required placeholder="أدخل الحد الاعلى للتمويل"><br>
+
+<label for="interest-rates">نسب الفوائد</label><br>
+<input type="text" id="interest-rates" name="interest-rates" required placeholder="أدخل نسب الفوائد">
+
+  
+
+
+<br><br>
+
+
+</select>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+ <label for="interest-rate">نسبة الفائدة%</label><br>
+<input type="text" id="interest-rate" name="interest-rate" required placeholder="أدخل نسبة الفائدة"><br>
+
+<label for="duration">المدة:</label><br>
+<input type="text" id="duration" name="duration" required placeholder="أدخل المدة">
+
+
+
+      
+      </div>
+
+
+
+
+      <!-- Buttons -->
+      <div class="step-buttons">
+        <button type="button" onclick="prevStep()">السابق</button>
+        <button type="button" onclick="nextStep()">التالي</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+
+  
+</body>
+<footer>
+  <div class="footer-right">
+      <img class="footer-logo" src="/media/sllamTech_logo.png" alt="Salam Tech Logo">
+    </div>
+  <div class="footer-center">
+      <p class="section-title">تواصل معنا</p>
+      <p class="phone">+966 12 345 6789</p>
+      <p class="email"><a href="mailto:info@sallmtech.com">info@sallmtech.com</a></p>
+    </div>
+  <div class="footer-top">
+    <div class="footer-left">
+      <span class="center text">
+      <p class="section-title">العنوان</p>
+      <p class="address">الرياض، المملكة العربية السعودية</p>
+      </span>
+    </div>
+  
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-links">
+      <ul>
+      <li><a href="#">سياسة الخصوصية</a> </li>
+      <a href="#">الشروط والأحكام</a>
+      </ul>
+    </div>
+    <p class="copyright">© 2025 سلم .تك. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+<script>
+
+ let currentStep = 0;
+const steps = document.querySelectorAll('.step');
+const indicators = document.querySelectorAll('.step-indicator');
+const nextButton = document.querySelector('.step-buttons .next-button'); // Target the "التالي" button
+const prevButton = document.querySelector('.step-buttons .prev-button'); // Target the "السابق" button
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('active', i === index);
+  });
+
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle('active', i === index);
+  });
+
+  // Change "التالي" button text to "تسليم" on the last step
+  if (currentStep === steps.length - 1) {
+    nextButton.textContent = "تسليم";  // Change to "تسليم" on last step
+  } else {
+    nextButton.textContent = "التالي"; // Keep "التالي" for other steps
+  }
+}
+
+function nextStep() {
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  } else {
+    // Submit the form when the user reaches the last step
+    document.getElementById("investorSignUpForm").submit();  // Submit form on last step
+    alert('تم تقديم النموذج بنجاح');
+  }
+}
+
+function prevStep() {
+  if (currentStep > 0) {
+    currentStep--;
+    showStep(currentStep);
+  }
+}
+
+// Initial display
+showStep(currentStep);
+</script>

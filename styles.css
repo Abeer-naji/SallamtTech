@@ -389,6 +389,7 @@ footer a:hover {
   width: 100%;
   max-width: 400px;
   
+  
 }
 
 h2 {
@@ -437,7 +438,7 @@ button:hover {
   background-color: #577F96;
 }
 
-.no-account{
+.no-accountText{
   text-align: center;
   color: #000;
 }
@@ -449,4 +450,216 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/*chooseUser page css*/
+
+.chooseUserText{
+  color:#577F96;
+  text-align: center;
+}
+.chooseUser_button_container{
+  display: flex;
+  flex-direction: column;  /* Stack buttons vertically */
+  gap: 10px;               /* Optional: space between the buttons */
+  align-items: center;     /* Optional: center buttons horizontally */
+  padding: 20px;
+
+}
+.chooseUser_button_container button{
+    width: 300px; /* Set the width of the buttons */
+  max-width: 100%; /* Make sure the button doesn't overflow the container */
+}
+.has-accountText{
+  text-align: center;
+  color: #000;
+}
+/*farmer sign up*/
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  direction: rtl;
+}
+
+.step-indicator {
+  flex: 1;
+  position: relative;
+  font-weight: bold;
+  color: #aaa;
+  padding-bottom: 10px;
+}
+
+.step-indicator::before {
+  content: '';
+  display: block;
+  margin: 0 auto 8px;
+  width: 14px;
+  height: 14px;
+  background: #ccc;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.step-indicator.active {
+  color: #003d4d;
+}
+
+.step-indicator.active::before {
+  background: #003d4d;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  left: 7px;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+.SignupForm_section{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: url('/media/signInbackGround.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 20px;
+
+}
+
+.signup_container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 20px;/*to make the edges softer*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+   max-height: 75vh;         /* 👈 LIMIT the height */
+  overflow-y: auto;         /* 👈 Scroll if content overflows */
+  
+}
+form input,
+form select,
+form textarea {
+  margin-bottom: 10px; /* reduce space */
+  color: #000;
+}
+
+form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color:#000;
+}
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.radio-group label {
+  width: 45%; /* 2-column layout */
+}
+.radio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ 
+  margin-bottom: 15px;
+}
+
+.radio-grid label {
+  display: flex;
+  align-items: center;
+  
+  font-weight: 500;
+}
+
+
+
+
+
+/* Make all radio and checkbox labels align horizontally with text */
+.radio-group label,
+.radio-grid label,
+form label input[type="radio"],
+form label input[type="checkbox"] {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+/* Optional: Ensure form direction is RTL */
+form {
+  direction: rtl;
+}
+
+/* Fix for default inline label display */
+form label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Group layout spacing */
+.radio-group,
+.radio-grid {
+  margin-bottom: 16px;
+  gap: 0; /* Remove any gap in the group */
+}
+
+/* For checkboxes grouped in a horizontal row */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;  /* Allow items to wrap on smaller screens */
+  gap: 20px;  /* Space between checkboxes */
+  margin-bottom: 15px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+.radio-group label,
+.checkbox-group label {
+  font-size: 15px;  /* Adjust to the desired size */
+  font-weight: 400; /* Optional: adjust the font weight for a lighter look */
+}
+input[type="radio"] {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  margin-right: -35px;/* Adjust space on the right if RTL */
+  margin-left: -40px;
+  
+}
+
+label {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  
+  line-height: 1;  /* Force tight line height */
+  position: relative;
+  top: -2px; /* Fine-tune this value if needed */
 }
